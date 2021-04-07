@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    container_name: mindef-mysql
+    hostname: mindef-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD:  mindef123
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'pass'
+    volumes:
+        - authservice-db-data:/var/lib/mysql
+  rabbitmq:
+    build: RabbitMQ/.
+    image: mindef-rabbitmq:latest
+    hostname: "rabbitmq"
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "15674:15674"
+  authservice:
+    container_name: authservice
+    build: MinDef-AuthService/.
+    hostname: authservice
+    ports:
+      - "44360:44360"
+volumes:
+  authservice-db-data:
+    
