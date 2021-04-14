@@ -1,38 +1,50 @@
 version: "3.7"
 
 services:
-  db:
+  authservice-db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
-    container_name: mindef-mysql
-    hostname: mindef-mysql
+    container_name: authservice-db
+    hostname: authservice-db
     environment:
       MYSQL_ROOT_PASSWORD:  mindef123
       MYSQL_USER: 'test'
       MYSQL_PASS: 'pass'
+    ports:
+      - 3306:3306
     volumes:
         - authservice-db-data:/var/lib/mysql
-  rabbitmq:
-    build: RabbitMQ/.
-    image: mindef-rabbitmq:latest
-    hostname: "rabbitmq"
-    container_name: rabbitmq
-    environment:
-      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
-      RABBITMQ_DEFAULT_USER: "rabbitmq"
-      RABBITMQ_DEFAULT_PASS: "rabbitmq"
-      RABBITMQ_DEFAULT_VHOST: "/"
-    ports:
-      - "15672:15672"
-      - "5672:5672"
-      - "15674:15674"
+    networks:
+      - authservice_network
   authservice:
     container_name: authservice
     build: MinDef-AuthService/.
+    restart: always 
     hostname: authservice
     ports:
-      - "44360:44360"
+      - "5002:80"
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - authservice_network
+  phpmyadmin:
+    depends_on:
+      - authservice-db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: authservice-db
+      MYSQL_ROOT_PASSWORD: mindef123 
+    networks:
+      - authservice_network
+
 volumes:
   authservice-db-data:
+networks:
+    authservice_network:
     
