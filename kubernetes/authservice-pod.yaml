@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: authservice
+  labels:
+    mindef.service: authservice
+spec:
+  containers:
+  - name: authservice
+    image: sacation/mindef-authservice:latest
+    ports:
+      - containerPort: 80
+      - containerPort: 5003
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: Development
+      - name: ASPNETCORE_URLS
+        value: http://+:80
+
+  - name: authservice-db
+    image: mysql
+    ports:
+      - containerPort: 3306
+    volumeMounts: 
+      - mountPath: /var/lib/mysql
+        name: authservice-db-data
+    args:
+      - --default-authentication-plugin=mysql_native_password
+    env:
+      - name: MYSQL_PASS
+        value: pass
+      - name: MYSQL_ROOT_PASSWORD
+        value: mindef123
+      - name: MYSQL_USER
+        value: test
+  volumes:
+    - name: authservice-db-data
+      persistentVolumeClaim:
+        claimName: authservice-db-data
