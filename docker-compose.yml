@@ -14,12 +14,12 @@ services:
     ports:
       - 3306:3306
     volumes:
-        - authservice-db-data:/var/lib/mysql
+      - authservice-db-data:/var/lib/mysql
     networks:
       - authservice_network
   authservice:
     container_name: authservice
-    build: MinDef-AuthService/.
+    build: ../MinDef-AuthService/.
     restart: always 
     hostname: authservice
     ports:

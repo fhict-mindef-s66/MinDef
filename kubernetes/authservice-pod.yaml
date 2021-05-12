@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: authservice
-    image: sacation/mindef-authservice:latest
+    image: fontysmindef/mindef-authservice:latest
     ports:
       - containerPort: 80
       - containerPort: 5003
@@ -16,7 +16,6 @@ spec:
         value: Development
       - name: ASPNETCORE_URLS
         value: http://+:80
-
   - name: authservice-db
     image: mysql
     ports:

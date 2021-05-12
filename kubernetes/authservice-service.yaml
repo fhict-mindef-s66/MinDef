@@ -8,7 +8,7 @@ spec:
   ports:
   - name: "5002"
     port: 5002
-    targetPort: 80
+    targetPort: 5002
   - name: "5003"
     port: 5003
     targetPort: 5003
