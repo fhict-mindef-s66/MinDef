@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   labels:
     mindef.service: authservice
-  name: authservice-db
+  name: authservice
+  namespace: mindef
 spec:
   replicas: 1
   selector:
@@ -14,7 +15,6 @@ spec:
   template:
     metadata:
       labels:
-        #mindef.network/authservice_network: "true"
         mindef.service: authservice
     spec:
       containers:
@@ -39,6 +39,29 @@ spec:
       hostname: authservice-db
       restartPolicy: Always
       serviceAccountName: ""
+      volumes:
+      - name: authservice-db-data
+        persistentVolumeClaim:
+          claimName: authservice-db-data
+      
+      - image: fontysmindef/mindef-authservice:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        
+        name: mindef-authservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: authservice
+      restartPolicy: Always
       volumes:
       - name: authservice-db-data
         persistentVolumeClaim:

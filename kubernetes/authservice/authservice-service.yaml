@@ -4,12 +4,19 @@ metadata:
   labels:
     mindef.service: authservice
   name: authservice
+  namespace: mindef
 spec:
+  type: NodePort
   ports:
-  - name: "3306"
+  - name: "5002"
+    port: 5002
+    targetPort: 5002
+  - name: "5003"
+    port: 5003
+    targetPort: 5003
+  - name: "authservice-db"
     port: 3306
     targetPort: 3306
   selector:
     mindef.service: authservice
-status:
-  loadBalancer: {}
+
