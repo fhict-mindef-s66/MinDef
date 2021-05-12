@@ -11,12 +11,15 @@ spec:
   - name: "5002"
     port: 5002
     targetPort: 5002
+    nodePort: 30101
   - name: "5003"
     port: 5003
     targetPort: 5003
+    nodePort: 30102
   - name: "authservice-db"
     port: 3306
     targetPort: 3306
+    nodePort: 30103
   selector:
     mindef.service: authservice
 
