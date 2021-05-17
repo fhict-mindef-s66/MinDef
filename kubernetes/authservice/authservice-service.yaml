@@ -20,6 +20,9 @@ spec:
     port: 3306
     targetPort: 3306
     nodePort: 30103
+  - name: "http"
+    port: 80
+    targetPort: 5002
   selector:
     mindef.service: authservice
 

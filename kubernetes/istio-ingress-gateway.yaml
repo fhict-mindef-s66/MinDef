@@ -1,0 +1,40 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: mindef-ingress-gateway
+  namespace: mindef
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80 # 443
+        name: http # https
+        protocol: HTTP # HTTPS
+      hosts:
+        - "*"
+      # tls:
+      #   mode: SIMPLE
+      #   credentialName: kwetter-ingress-gateway-tls-credentials
+      # https://istio.io/latest/docs/tasks/traffic-management/ingress/secure-ingress/
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: mindef-ingress-gateway-virtual-service
+  namespace: mindef
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - mindef-ingress-gateway
+  http:
+  - name: authservice-latest-routes
+    match:
+    - uri:
+        prefix: /api/auth
+    route:
+    - destination:
+        port:
+          number: 80
+        host: authservice
