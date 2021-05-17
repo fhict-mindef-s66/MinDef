@@ -6,11 +6,11 @@ metadata:
 spec:
   rules:
   - http:
-    paths:
-    - path: /auth
-      pathType: Prefix
-      backend:
-        service:
-          name: mindef-backend
-          port: 
-            number: 80
+      paths:
+      - path: /auth
+        pathType: Prefix
+        backend:
+          service:
+            name: mindef-backend
+            port: 
+              number: 80
