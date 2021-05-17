@@ -8,18 +8,15 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: "5002"
-    port: 5002
+  - name: "http"
+    port: 80
     targetPort: 80
-    # nodePort: 30101
-  - name: "5003"
-    port: 5003
+  - name: "https"
+    port: 443
     targetPort: 443
-    # nodePort: 30102
-  - name: "authservice-db"
+  - name: "db"
     port: 3306
     targetPort: 3306
-    # nodePort: 30103
   selector:
     mindef.service: authservice
 
