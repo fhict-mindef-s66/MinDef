@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: mindef
   labels: 
-    istio-injection: enabled
+    istio-injection: disabled
