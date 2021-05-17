@@ -3,11 +3,12 @@ kind: Ingress
 metadata:
   name: mindef-ingress
   namespace: mindef
+  nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
   - http:
       paths:
-      - path: /auth
+      - path: /auth(/|$)(.*)
         pathType: Prefix
         backend:
           service:

@@ -3,7 +3,6 @@ kind: Service
 metadata:
   labels:
     mindef.service: authservice
-    nginx.ingress.kubernetes.io/rewrite-target: /
   name: authservice
   namespace: mindef
 spec:

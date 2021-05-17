@@ -18,40 +18,13 @@ spec:
         mindef.service: authservice
     spec:
       containers:
-      - args:
-        - --default-authentication-plugin=mysql_native_password
-        env:
-        - name: MYSQL_PASS
-          value: pass
-        - name: MYSQL_ROOT_PASSWORD
-          value: mindef123
-        - name: MYSQL_USER
-          value: test
-        image: mysql
-        imagePullPolicy: "IfNotPresent"
-        name: authservice-db
-        ports:
-        - containerPort: 3306
-        resources: {}
-        volumeMounts:
-        - mountPath: /var/lib/mysql
-          name: authservice-db-data
-      hostname: authservice-db
-      restartPolicy: Always
-      serviceAccountName: ""
-      volumes:
-      - name: authservice-db-data
-        persistentVolumeClaim:
-          claimName: authservice-db-data
-      
       - image: fontysmindef/mindef-authservice:latest
         imagePullPolicy: Always
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: Production
         - name: ASPNETCORE_URLS
-          value: http://+:80
-        
+          value: http://+:80       
         name: mindef-authservice
         ports:
         - containerPort: 80
@@ -62,8 +35,4 @@ spec:
             cpu: "1500m"
       hostname: authservice
       restartPolicy: Always
-      volumes:
-      - name: authservice-db-data
-        persistentVolumeClaim:
-          claimName: authservice-db-data
 status: {}

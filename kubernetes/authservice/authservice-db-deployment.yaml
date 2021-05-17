@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    mindef.service: authservice
+  name: authservice-db
+  namespace: mindef
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      mindef.service: authservice
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        mindef.service: authservice
+    spec:
+      containers:
+      - args:
+        - --default-authentication-plugin=mysql_native_password
+        env:
+        - name: MYSQL_PASS
+          value: pass
+        - name: MYSQL_ROOT_PASSWORD
+          value: mindef123
+        - name: MYSQL_USER
+          value: test
+        image: mysql
+        imagePullPolicy: "IfNotPresent"
+        name: authservice-db
+        ports:
+        - containerPort: 3306
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: authservice-db-data
+      hostname: authservice-db
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: authservice-db-data
+        persistentVolumeClaim:
+          claimName: authservice-db-data
+status: {}
