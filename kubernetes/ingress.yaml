@@ -5,12 +5,12 @@ metadata:
   namespace: mindef
 spec:
   rules:
-    - http:
-      paths:
-      - path: /auth
-        pathType: Prefix
-        backend:
-          service:
-            name: mindef-backend
-            port: 
-              number: 80
+  - http:
+    paths:
+    - path: /auth
+      pathType: Prefix
+      backend:
+        service:
+          name: mindef-backend
+          port: 
+            number: 80
