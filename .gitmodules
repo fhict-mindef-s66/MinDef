@@ -2,8 +2,6 @@
 	url = https://github.com/fhict-mindef-s66/MinDef-Api-Gateway
 [submodule "MinDef-LogService"]
 	url = https://github.com/fhict-mindef-s66/MinDef-LogService.git
-[submodule "HACKIT-Network-Detection"]
-	url = https://github.com/fhict-mindef-s66/HACKIT-Network-Detection.git
 [submodule "MinDef-AuthService"]
 	url = https://github.com/fhict-mindef-s66/MinDef-AuthService.git
 [submodule "MinDef-Dashboard"]
