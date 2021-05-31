@@ -6,3 +6,5 @@
 	url = https://github.com/fhict-mindef-s66/MinDef-AuthService.git
 [submodule "MinDef-Dashboard"]
 	url = https://github.com/fhict-mindef-s66/MinDef-Dashboard.git
+[submodule "MinDef-DataCollectorService"]
+	url = https://github.com/fhict-mindef-s66/MinDef-DataCollectorService
