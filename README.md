@@ -16,7 +16,9 @@ connect using ssh using the credentials, which you can receive from a team membe
 
 ### cookie for rabbitmq services communication
 - ```echo -n "some secret key" > cookie```
-- ```kubectl create secret generic erlang-cookie --from-file=./cookie```
+- ```sudo microk8s kubectl create secret generic erlang-cookie --from-file=./cookie```
+#### install rabbitmq on the cluster:
+- ```sudo microk8s kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"```
 ### for admin user
 - ```echo -n "mindef" > user```
 - ```echo -n "kldjlkh5ihfikjfn4" > pass```
@@ -31,6 +33,7 @@ connect using ssh using the credentials, which you can receive from a team membe
 
 and then
 - ```sudo microk8s kubectl apply -f .```
+- ```sudo microk8s kubectl config set-context --current --namespace=mindef```
 - ```sudo microk8s kubectl apply -f ./frontend```
 - etc. repeat for each folder
 

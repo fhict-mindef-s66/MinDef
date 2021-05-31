@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Gateway", "Api.Gateway.csproj", "{FED15211-00C9-4339-9486-FAEF575FF6E5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinDef-AuthService", "MinDef-AuthService\MinDef-AuthService\MinDef-AuthService.csproj", "{947FD7FB-7932-42A1-8E3C-D8067830CF55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Gateway", "MinDef-Api-Gateway\Api.Gateway.csproj", "{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinDef-DataCollectorService", "MinDef-DataCollectorService\MinDef-DataCollectorService\MinDef-DataCollectorService.csproj", "{5282E7B1-365A-4317-9FC0-583372B32168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FED15211-00C9-4339-9486-FAEF575FF6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FED15211-00C9-4339-9486-FAEF575FF6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FED15211-00C9-4339-9486-FAEF575FF6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FED15211-00C9-4339-9486-FAEF575FF6E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{947FD7FB-7932-42A1-8E3C-D8067830CF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{947FD7FB-7932-42A1-8E3C-D8067830CF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{947FD7FB-7932-42A1-8E3C-D8067830CF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{947FD7FB-7932-42A1-8E3C-D8067830CF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5282E7B1-365A-4317-9FC0-583372B32168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5282E7B1-365A-4317-9FC0-583372B32168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5282E7B1-365A-4317-9FC0-583372B32168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5282E7B1-365A-4317-9FC0-583372B32168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
