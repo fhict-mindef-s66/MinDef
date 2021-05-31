@@ -18,7 +18,7 @@ spec:
         mindef.service: mindef-frontend
     spec:
       containers:
-      - image: mindef/mindef-front:latest
+      - image: fontysmindef/mindef-front:latest
         imagePullPolicy: Always
         name: mindef-frontend
         ports:
