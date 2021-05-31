@@ -7,28 +7,31 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: mindefdashboard.nl
+    http:
       paths:
-      - host: mindefdashboard.nl
-        path: /
+      - path: / 
         pathType: Prefix
         backend:
           service:
             name: mindef-frontend
             port: 
               number: 3000
-      - host: api.mindefdashboard.nl
-        path: /
+  - host: api.mindefdashboard.nl
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: mindef-gateway
             port: 
               number: 80
-
 # development only
-      - host: authservice.mindefdashboard.nl
-        path: /
+  - host: authservice.mindefdashboard.nl
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
