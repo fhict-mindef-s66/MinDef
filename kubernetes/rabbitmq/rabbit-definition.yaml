@@ -1,0 +1,27 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: mindef-mq
+  namespace: mindef
+spec:
+  replicas: 1
+  resources:
+    requests:
+      cpu: 1
+      memory: 100m
+    limits:
+      cpu: 2
+      memory: 2Gi
+  rabbitmq:
+    additionalConfig: |
+      vm_memory_high_watermark.relative = 0.7
+      disk_free_limit.absolute = 50MB
+      collect_statistics_interval = 10000
+  persistence:
+    storage: "1Gi"
+  override:
+    statefulSet:
+      spec:
+        template:
+          spec:
+            containers: []

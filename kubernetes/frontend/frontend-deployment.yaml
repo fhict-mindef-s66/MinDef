@@ -1,33 +1,33 @@
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   labels:
-#     mindef.service: mindef-frontend
-#   name: mindef-frontend
-#   namespace: mindef
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       mindef.service: mindef-frontend
-#   strategy:
-#     type: Recreate
-#   template:
-#     metadata:
-#       labels:
-#         mindef.service: mindef-frontend
-#     spec:
-#       containers:
-#       - image: mindef/mindef-front:latest
-#         imagePullPolicy: Always
-#         name: mindef-userservice
-#         ports:
-#         - containerPort: 80
-#         - containerPort: 443
-#         resources:
-#           limits:
-#             memory: "1024Mi"
-#             cpu: "1500m"
-#       hostname: mindef-frontend
-#       restartPolicy: Always
-# status: {}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    mindef.service: mindef-frontend
+  name: mindef-frontend
+  namespace: mindef
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      mindef.service: mindef-frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        mindef.service: mindef-frontend
+    spec:
+      containers:
+      - image: mindef/mindef-front:latest
+        imagePullPolicy: Always
+        name: mindef-frontend
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: mindef-frontend
+      restartPolicy: Always
+status: {}

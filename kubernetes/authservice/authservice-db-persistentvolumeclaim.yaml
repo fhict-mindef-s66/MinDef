@@ -4,7 +4,7 @@ metadata:
   name: authservice-db-data
   namespace: mindef
 spec:
-  storageClassName: manual
+  storageClassName: microk8s-hostpath
   accessModes:
   - ReadWriteOnce
   resources:
