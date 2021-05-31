@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    mindef.service: authservice
+  name: gateway
+  namespace: mindef
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      mindef.service: gateway
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        mindef.service: gateway
+    spec:
+      containers:
+      - image: fontysmindef/mindef-gateway:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80       
+        name: gateway
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: gateway
+      restartPolicy: Always
+status: {}
