@@ -1,6 +1,18 @@
 version: "3.7"
 
 services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+        - 5672:5672
+        - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+        - rabbitmq:/var/lib/rabbitmq/
+        - rabbitmq:/var/log/rabbitmq/
   authservice-db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
@@ -17,19 +29,7 @@ services:
       - authservice-db-data:/var/lib/mysql
     networks:
       - authservice_network
-  authservice:
-    container_name: authservice
-    build: ../MinDef-AuthService/.
-    restart: always 
-    hostname: authservice
-    ports:
-      - "5002:80"
-      - "5003:5003"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-    networks:
-      - authservice_network
+
   phpmyadmin:
     depends_on:
       - authservice-db
@@ -45,6 +45,7 @@ services:
 
 volumes:
   authservice-db-data:
+  rabbitmq:
 networks:
     authservice_network:
     
