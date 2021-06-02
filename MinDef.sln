@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mindef-NetworkAnalyserServi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinDef-DataCollectorService", "MinDef-DataCollectorService\MinDef-DataCollectorService\MinDef-DataCollectorService.csproj", "{04C6B5EC-0744-4F47-9EFA-BE074766B95B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3BABE13D-BDEF-4A49-B716-37370D1A9CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinDef.Models", "MinDef.Models\MinDef.Models.csproj", "{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{04C6B5EC-0744-4F47-9EFA-BE074766B95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C6B5EC-0744-4F47-9EFA-BE074766B95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C6B5EC-0744-4F47-9EFA-BE074766B95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{FE6789C9-60AC-4BE7-A8EE-F662E6C5BB1C} = {6CC7D040-55B3-42C9-B669-D75D875E73F0}
 		{753D7C31-5C87-43B2-9489-5515E6E115A5} = {C68D621A-914F-4018-A5AF-4E06B6F8CA51}
 		{04C6B5EC-0744-4F47-9EFA-BE074766B95B} = {C68D621A-914F-4018-A5AF-4E06B6F8CA51}
+		{0B2C936C-594F-42EF-B632-F0AC2B5DEF0C} = {3BABE13D-BDEF-4A49-B716-37370D1A9CE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A062664-234E-42FE-B667-639999611F6D}
