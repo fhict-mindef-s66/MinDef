@@ -1,13 +1,65 @@
 # Welcome to the MinDef github repository!!!
 
-The mindef project
+Wat is belangrijk om te delen aan developers?
+- services, en hun doel
+- build status
+- diagrams, any documentation links
+- research files
+- getting started
+- hosting
 
-# current hosting: NetLab
-we are currently hosting the application on the NetLab server owned by FHICT. To access this server you will need a fontys vpn (cisco).
-once connected to the vpn you can access the application on [192.168.220.45](192.168.220.45)
-and can manage the server at: [https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary](https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary)
+# Participators & Stakeholders
+|Name|Email|Role|From|
+|---|---|---|---|
+|**Luuk Ebenau**|l.ebenau student.fontys.nl|SE member|1-21 til 7-21|
+|**Youri Saman**|y.saman student.fontys.nl|SE member|1-21 til 7-21|
+|**Twan Beeren**|t.beeren student.fontys.nl|SE member|1-21 til 7-21|
+|**Roel Lucassen**|r.lucassen student.fontys.nl|SE member|1-21 til 7-21|
+|**Ruben Hemmes**|r.hemmes student.fontys.nl|SE member|1-21 til 7-21|
+|**Alexander Lambooij**|a.lambooij student.fontys.nl|SE member|1-21 til 7-21|
+|**Jean Piere**|*contact team member*|Stakeholder, PO|1-21 til now|
+|**Jeffrey Cornelissen**|j.cornelissen fontys.nl|SE Teacher|1-21 til 7-21|
+|**Erik van der Schriek**|e.vanderschiek fontys.nl|SE Teacher|1-21 til 7-21|
 
-connect using ssh using the credentials, which you can receive from a team member.
+# Application architecture
+We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
+
+the application is designed using LucidChart, located at [https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit](https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit?shared=true&page=Hvrh6oVuJI0e#)
+## C1
+![./docs/c1_diagram.png](./docs/c1_diagram.png)
+## C2
+![./docs/c2_diagram.png](./docs/c2_diagram.png)
+## C3
+![./docs/c3_diagram.png](./docs/c3_diagram.png)
+
+# Research
+During the development we've researched various subjects. Thee are partly dutch and partly english
+|Subject|Link|
+|---|---|
+|**Authentication**|[research/research_auth.docx](./docs/research/research_auth.docx)|
+|**External Communication**|[research/external_communication.docx](./docs/research/external_communication.docx)|
+|**Installation&extensibility**|[research/install_and_extensibility.docx](./docs/research/instal_and_extensibility.docx)|
+|**UX Research**|[research/ux_research.docx](./docs/research/ux_research.docx)|
+|**Research on potential defensive and offensive actions**|[research/actions_research.docx](./docs/research/actions_research.docx)|
+|**MQ Architecture**|[research/mq_research.docx](./docs/research/mq_research.docx)|
+# Services
+## Api Gateway
+
+## Auth Service
+
+## Dashboard (frontend)
+
+## Sensor Mock Service
+This is a temporary service, designed to **mock** and **simulate** data normally retrieved by sensors and the drones. 
+## Data Collector Service
+## Data Analyser Service
+
+## Notification Service
+The goal of this service is to send notifications to the frontend to:
+-  specific users
+-  groups(e.g. commanders)
+
+
 
 # Getting started (Kubernetes)
 
@@ -51,3 +103,11 @@ in my case i've added:
 you probably need to restart your device for these changes to take into effect.
 
 and thats it! your application should be up and running.
+
+
+# current hosting: NetLab
+we are currently hosting the application on the NetLab server owned by FHICT. To access this server you will need a fontys vpn (cisco).
+once connected to the vpn you can access the application on [192.168.220.45](192.168.220.45)
+and can manage the server at: [https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary](https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary)
+
+connect using ssh using the credentials, which you can receive from a team member.
