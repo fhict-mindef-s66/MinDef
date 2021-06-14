@@ -1,6 +1,8 @@
 # MinDef Cyber Dashboard
 Welcome to the MinDef GitHub repository!
-This project is an initiative in collaboration between the Fontys University of Applied 
+This project is an initiative in collaboration between the Fontys University of Applied Sciences and the Ministery of Defence outpost in Oirschot.
+
+The goal of the project is to innovate and experiment to make optimal use of the data collected by autonomous tanks (drones).
 
 
 Wat is belangrijk om te delen aan developers?
