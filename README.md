@@ -13,17 +13,20 @@ Wat is belangrijk om te delen aan developers?
 # Participators & Stakeholders
 |Name|Email|Role/Spec|From|
 |---|---|---|---|
-|**Jean Piere**|*contact team member*|Stakeholder, PO|1-21 til now|
-|**Jeffrey Cornelissen**|j.cornelissen fontys.nl|SE Teacher|1-21 til 7-21|
-|**Erik van der Schriek**|e.vanderschiek fontys.nl|SE Teacher|1-21 til 7-21|
+|**Jean Piere**|*contact a team member*|Stakeholder, PO|1-21 till now|
+|**Jeffrey Cornelissen**|j.cornelissen fontys.nl|SE Teacher|1-21 till 7-21|
+|**Erik van der Schriek**|e.vanderschiek fontys.nl|SE Teacher|1-21 till 7-21|
+|**Gerard Elbers**|g.elbers fontys.nl|SE Teacher|1-21 till 7-21|
 |*Team active from:*|*01-2021 t/m 07-2021*|-----------------|-------------|
-|**Luuk Ebenau**|l.ebenau student.fontys.nl|SE member|1-21 til 7-21|
-|**Youri Saman**|y.saman student.fontys.nl|SE-CS member|1-21 til 7-21|
-|**Twan Beeren**|t.beeren student.fontys.nl|SE member|1-21 til 7-21|
-|**Roel Lucassen**|r.lucassen student.fontys.nl|SE-CS member|1-21 til 7-21|
-|**Ruben Hemmes**|r.hemmes student.fontys.nl|SE-CS member|1-21 til 7-21|
-|**Alexander Lambooij**|a.lambooij student.fontys.nl|SE-CS member|1-21 til 7-21|
+|**Luuk Ebenau**|l.ebenau student.fontys.nl|SE member|1-21 till 7-21|
+|**Youri Saman**|y.saman student.fontys.nl|SE-CS member|1-21 till 7-21|
+|**Twan Beeren**|t.beeren student.fontys.nl|SE member|1-21 till 7-21|
+|**Roel Lucassen**|r.lucassen student.fontys.nl|SE-CS member|1-21 till 7-21|
+|**Ruben Hemmes**|r.hemmes student.fontys.nl|SE-CS member|1-21 till 7-21|
+|**Alexander Lambooij**|a.lambooij student.fontys.nl|SE-CS member|1-21 till 7-21|
 
+
+[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)
 
 # Application architecture
 We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
