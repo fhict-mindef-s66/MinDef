@@ -1,10 +1,7 @@
 # Welcome to the MinDef github repository!!!
 
 Wat is belangrijk om te delen aan developers?
-- services, en hun doel
 - build status
-- diagrams, any documentation links
-- research files
 - getting started
 - hosting
 
@@ -42,6 +39,8 @@ During the development we've researched various subjects. Thee are partly dutch 
 |**UX Research**|[research/ux_research.docx](./docs/research/ux_research.docx)|
 |**Research on potential defensive and offensive actions**|[research/actions_research.docx](./docs/research/actions_research.docx)|
 |**MQ Architecture**|[research/mq_research.docx](./docs/research/mq_research.docx)|
+|**Overview of Sensors on the drone**|[research/sensor_research.docx](./docs/research/sensor_research.docx)|
+|**Testplan**|[research/testplan.docx](./docs/research/testplan.docx)|
 # Services
 ## Api Gateway
 
