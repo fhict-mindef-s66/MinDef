@@ -11,5 +11,14 @@
 	url = https://github.com/fhict-mindef-s66/MinDef-Dashboard.git
 	path = MinDef-Dashboard
 [submodule "MinDef-DataCollectorService"]
-	url = https://github.com/fhict-mindef-s66/MinDef-DataCollectorService
+	url = https://github.com/fhict-mindef-s66/MinDef-DataCollectorService.git
 	path = MinDef-DataCollectorService
+[submodule "MinDef-DataCollectorService"]
+	url = https://github.com/fhict-mindef-s66/MinDef-DataAnalyser.git
+	path = MinDef-DataAnalyser
+[submodule "MinDef-NotificationService"]
+	url = https://github.com/fhict-mindef-s66/MinDef-NotificationService.git
+	path = MinDef-NotificationService
+[submodule "MinDef-Sensor-MockService"]
+	url = https://github.com/fhict-mindef-s66/MinDef-Sensor-MockService
+	path = MinDef-Sensor-MockService
