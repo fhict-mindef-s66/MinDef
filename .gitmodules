@@ -1,10 +1,15 @@
 [submodule "MinDef-Api-Gateway"]
-	url = https://github.com/fhict-mindef-s66/MinDef-Api-Gateway
+	url = https://github.com/fhict-mindef-s66/MinDef-Api-Gateway.git
+	path = MinDef-Api-Gateway
 [submodule "MinDef-LogService"]
 	url = https://github.com/fhict-mindef-s66/MinDef-LogService.git
+	path = MinDef-LogService
 [submodule "MinDef-AuthService"]
 	url = https://github.com/fhict-mindef-s66/MinDef-AuthService.git
+	path = MinDef-AuthService
 [submodule "MinDef-Dashboard"]
 	url = https://github.com/fhict-mindef-s66/MinDef-Dashboard.git
+	path = MinDef-Dashboard
 [submodule "MinDef-DataCollectorService"]
 	url = https://github.com/fhict-mindef-s66/MinDef-DataCollectorService
+	path = MinDef-DataCollectorService
