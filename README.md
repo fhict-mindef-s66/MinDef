@@ -25,8 +25,10 @@ Wat is belangrijk om te delen aan developers?
 |**Ruben Hemmes**|r.hemmes student.fontys.nl|SE-CS member|1-21 till 7-21|
 |**Alexander Lambooij**|a.lambooij student.fontys.nl|SE-CS member|1-21 till 7-21|
 
-
-[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)
+# Build Status
+|Service|Status|
+|---|---|
+|AuthService|[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)|
 
 # Application architecture
 We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
