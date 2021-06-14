@@ -3,10 +3,14 @@ Welcome to the MinDef GitHub repository!
 This project is an initiative in collaboration between the Fontys University of Applied Sciences and the Ministery of Defence outpost in Oirschot.
 
 The goal of the project is to innovate and experiment to make optimal use of the data collected by autonomous tanks (drones).
-
-Wat is belangrijk om te delen aan developers?
-- getting started
-- hosting
+## Table of Contents
+- [Participators & Stakeholders](#participators--stakeholders)
+- [Build Status](#build-status)
+- [Getting Started](#getting-started-kubernetes)
+- [Services](#services)
+- [Architecture](#application-architecture)
+- [Research](#research)
+- [Hosting](#hosting)
 
 # Participators & Stakeholders
 |Name|Email|Role/Spec|From|
@@ -27,26 +31,6 @@ Wat is belangrijk om te delen aan developers?
 |Service|Status|
 |---|---|
 |AuthService|[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)|
-
-# Services
-For all the services, there's an Postman workspace which contains all the requests.
-[https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc](https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc)
-## Dashboard (frontend)
-This is the application that will be used to overview all data and insights collected by the system.
-![./docs/dashboard.png](./docs/dashboard.png)
-## Api Gateway
-This is the communication gateway between the dashboard and the services, it takes care of authentication and linking requests to the right service.
-## Auth Service
-
-## Sensor Mock Service
-This is a temporary service, designed to **mock** and **simulate** data normally retrieved by sensors and the drones. 
-## Data Collector Service
-## Data Analyser Service
-
-## Notification Service
-The goal of this service is to send notifications to the frontend to:
--  specific users
--  groups(e.g. commanders)
 
 # Getting started (Kubernetes)
 
@@ -90,6 +74,28 @@ in my case i've added:
 you probably need to restart your device for these changes to take into effect.
 
 and thats it! your application should be up and running.
+
+# Services
+For all the services, there's an Postman workspace which contains all the requests.
+[https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc](https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc)
+## Dashboard (frontend)
+This is the application that will be used to overview all data and insights collected by the system.
+![./docs/dashboard.png](./docs/dashboard.png)
+## Api Gateway
+This is the communication gateway between the dashboard and the services, it takes care of authentication and linking requests to the right service.
+## Auth Service
+This service is responsible for hnadling authentication, managing application users and generating tokens 
+## Sensor Mock Service
+This is a temporary service, designed to **mock** and **simulate** data normally retrieved by sensors and the drones. 
+## Data Collector Service
+The job of the data collector service is to listen to the raw data streams in the system, and combine those data streams into more specific streams
+## Network Data Analyser Service(s)
+The data analyser service(s) Are services that gather information and insights from the raw data streams in the system. The data flow generally goes as following:
+- mock service [raw data] -> data collector service -> data analyser -> information/insights
+## Notification Service
+The goal of this service is to send notifications to the frontend to:
+-  specific users
+-  groups(e.g. commanders)
 
 # Application architecture
 We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
