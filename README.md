@@ -4,9 +4,7 @@ This project is an initiative in collaboration between the Fontys University of 
 
 The goal of the project is to innovate and experiment to make optimal use of the data collected by autonomous tanks (drones).
 
-
 Wat is belangrijk om te delen aan developers?
-- build status
 - getting started
 - hosting
 
@@ -30,35 +28,15 @@ Wat is belangrijk om te delen aan developers?
 |---|---|
 |AuthService|[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)|
 
-# Application architecture
-We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
-
-the application is designed using LucidChart, located at [https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit](https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit?shared=true&page=Hvrh6oVuJI0e#)
-## C1
-![./docs/c1_diagram.png](./docs/c1_diagram.png)
-## C2
-![./docs/c2_diagram.png](./docs/c2_diagram.png)
-## C3
-![./docs/c3_diagram.png](./docs/c3_diagram.png)
-
-# Research
-During the development we've researched various subjects. Thee are partly dutch and partly english
-|Subject|Link|
-|---|---|
-|**Authentication**|[research/research_auth.docx](./docs/research/research_auth.docx)|
-|**External Communication**|[research/external_communication.docx](./docs/research/external_communication.docx)|
-|**Installation&extensibility**|[research/install_and_extensibility.docx](./docs/research/instal_and_extensibility.docx)|
-|**UX Research**|[research/ux_research.docx](./docs/research/ux_research.docx)|
-|**Research on potential defensive and offensive actions**|[research/actions_research.docx](./docs/research/actions_research.docx)|
-|**MQ Architecture**|[research/mq_research.docx](./docs/research/mq_research.docx)|
-|**Overview of Sensors on the drone**|[research/sensor_research.docx](./docs/research/sensor_research.docx)|
-|**Testplan**|[research/testplan.docx](./docs/research/testplan.docx)|
 # Services
-## Api Gateway
-
-## Auth Service
-
+For all the services, there's an Postman workspace which contains all the requests.
+[https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc](https://app.getpostman.com/join-team?invite_code=ee304ee64afcbcde3ecfc8066f19272e&ws=4ce06c57-080a-4536-8acb-24e234a51ccc)
 ## Dashboard (frontend)
+This is the application that will be used to overview all data and insights collected by the system.
+![./docs/dashboard.png](./docs/dashboard.png)
+## Api Gateway
+This is the communication gateway between the dashboard and the services, it takes care of authentication and linking requests to the right service.
+## Auth Service
 
 ## Sensor Mock Service
 This is a temporary service, designed to **mock** and **simulate** data normally retrieved by sensors and the drones. 
@@ -69,8 +47,6 @@ This is a temporary service, designed to **mock** and **simulate** data normally
 The goal of this service is to send notifications to the frontend to:
 -  specific users
 -  groups(e.g. commanders)
-
-
 
 # Getting started (Kubernetes)
 
@@ -115,8 +91,31 @@ you probably need to restart your device for these changes to take into effect.
 
 and thats it! your application should be up and running.
 
+# Application architecture
+We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
 
-# current hosting: NetLab
+the application is designed using LucidChart, located at [https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit](https://lucid.app/lucidchart/0f102e07-5322-4b9c-a49c-877b9c1c58a4/edit?shared=true&page=Hvrh6oVuJI0e#)
+## C1
+![./docs/c1_diagram.png](./docs/c1_diagram.png)
+## C2
+![./docs/c2_diagram.png](./docs/c2_diagram.png)
+## C3
+![./docs/c3_diagram.png](./docs/c3_diagram.png)
+
+# Research
+During the development we've researched various subjects. Thee are partly dutch and partly english
+|Subject|Link|
+|---|---|
+|**Authentication**|[research/research_auth.docx](./docs/research/research_auth.docx)|
+|**External Communication**|[research/external_communication.docx](./docs/research/external_communication.docx)|
+|**Installation&extensibility**|[research/install_and_extensibility.docx](./docs/research/instal_and_extensibility.docx)|
+|**UX Research**|[research/ux_research.docx](./docs/research/ux_research.docx)|
+|**Research on potential defensive and offensive actions**|[research/actions_research.docx](./docs/research/actions_research.docx)|
+|**MQ Architecture**|[research/mq_research.docx](./docs/research/mq_research.docx)|
+|**Overview of Sensors on the drone**|[research/sensor_research.docx](./docs/research/sensor_research.docx)|
+|**Testplan**|[research/testplan.docx](./docs/research/testplan.docx)|
+
+# Hosting
 we are currently hosting the application on the NetLab server owned by FHICT. To access this server you will need a fontys vpn (cisco).
 once connected to the vpn you can access the application on [192.168.220.45](192.168.220.45)
 and can manage the server at: [https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary](https://vcenter.fhict.local/ui/app/vm;nav=h/urn:vmomi:VirtualMachine:vm-23476613:705BE42C-681E-44C4-994F-D3D8B75D4D6A/summary)
