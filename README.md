@@ -28,7 +28,7 @@ Wat is belangrijk om te delen aan developers?
 # Build Status
 |Service|Status|
 |---|---|
-|AuthService|[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)|
+|AuthService|[![.NET](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/fhict-mindef-s66/MinDef-AuthService/actions/workflows/dotnet.yml)|
 
 # Application architecture
 We designed the application using the C4 Model, as following you can find the C1 t/m c4 diagrams of the application.
